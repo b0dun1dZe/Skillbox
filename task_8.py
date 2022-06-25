@@ -22,13 +22,13 @@ print('Задача 8. Сумма ряда')
 userNumber = float(input('Введите x: '))
 userPrecision = float(input('Введите точность: '))
 
-def factorial(a):
+def factorial(a): #Нахождение факториала
   b = 1
   for i in range(1, a + 1):
     b *= i
   return b
 
-def degree(a, n):
+def degree(a, n): #Возведение в степень
   b = 1
   for i in range(n):
     b *= a
