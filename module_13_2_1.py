@@ -7,14 +7,16 @@
 
 userInput = int(input('Введите число: '))
 
+
 def summa_n(number):
-  count = 0
-  for num in range(1, number + 1):
-    count += num
-  return count
+    count = 0
+    for num in range(1, number + 1):
+        count += num
+    return count
 
-firstSumm = summa_n(userInput)
-secondSumm = summa_n(firstSumm)
 
-print(f'Сумма от 1 до {userInput} будет {firstSumm}')
-print(f'Сумма от 1 до {firstSumm} будет {secondSumm}')
+first_summ = summa_n(userInput)
+second_summ = summa_n(first_summ)
+
+print(f'Сумма от 1 до {userInput} будет {first_summ}')
+print(f'Сумма от 1 до {first_summ} будет {second_summ}')
