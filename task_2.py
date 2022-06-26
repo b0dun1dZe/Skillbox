@@ -15,7 +15,7 @@ print('Задача 2. Функция максимума')
 # Для этого используйте только функцию нахождения максимума из двух чисел.
 
 
-def maxNumber(a, b):
+def max_number(a, b):
     return (a + b + abs(a - b)) / 2
 
 
@@ -23,8 +23,8 @@ userFirstNumber = int(input('Введите число №1: '))
 userSecondNumber = int(input('Введите число №2: '))
 userThirdNumber = int(input('Введите число №3: '))
 
-maxOfTwo = maxNumber(userFirstNumber, userSecondNumber)
+maxOfTwo = max_number(userFirstNumber, userSecondNumber)
 
 print(
-    f'Максимальное из трех чисел - число {int(maxNumber(maxOfTwo, userThirdNumber))}'
+    f'Максимальное из трех чисел - число {int(max_number(maxOfTwo, userThirdNumber))}'
 )
