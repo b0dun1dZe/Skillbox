@@ -48,3 +48,5 @@ while abs(currentDanger) > maxDanger:
         maxDepth = midDepth
     currentDanger = danger_level(midDepth)
 print(f'Приблизительная глубина безопасной кладки: {midDepth}')
+
+#  Задача решена!
