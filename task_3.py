@@ -20,11 +20,11 @@ print('Задача 3. Число наоборот 2')
 
 
 def reverse(number):
-    reverseNumber = ''
+    reverse_number = ''
     while number != 0:
-        reverseNumber += str(number % 10)
+        reverse_number += str(number % 10)
         number //= 10
-    return reverseNumber
+    return reverse_number
 
 
 userFirstNumber = int(input('Введите первое число: '))
