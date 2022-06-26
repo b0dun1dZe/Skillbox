@@ -102,7 +102,7 @@ while year < creditRebalance:
     print(f'Выплачено процентов: {creditTotal * creditPercent}')
     print(f'Выплачено тело кредита: {creditPaid}')
 print(f'\nОстаток долга: {creditTotal - creditPaid}')
-print('\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n')
+print('\n!!!!!!!!!!!!!!!!!=====================!!!!!!!!!!!!!!!!!!!\n')
 creditProlongation = int(input('На сколько лет продляется договор? '))
 creditInflation = int(input('Увеличение ставки до: ')) / 100
 while year < creditDuration + creditProlongation:
