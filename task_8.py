@@ -47,3 +47,5 @@ while abs(total(userNumber, currentStep)) >= userPrecision:
     result += total(userNumber, currentStep)
     currentStep += 1
 print(f'Сумма ряда = {result}')
+
+# Задача решена!
