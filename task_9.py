@@ -81,34 +81,38 @@ creditDuration = int(input('На сколько лет выдан? '))
 creditPercent = int(input('Сколько процентов годовых? ')) / 100
 creditRebalance = int(input('Через сколько лет пересмотр условий? '))
 
+
 def annuity(i, n, s):
-  k = (i * (1 + i)**n) / ((1 + i)**n - 1)
-  a = k * s
-  return round(a, 2)
+    k = (i * (1 + i) ** n) / ((1 + i) ** n - 1)
+    a = k * s
+    return round(a, 2)
+
 
 creditPaid = 0
 currentDuration = 0
 year = 0
 while year < creditRebalance:
-  currentDuration = creditDuration - year
-  print(f'\nПериод: {year + 1}')
-  year += 1
-  creditTotal -= creditPaid
-  print(f'\nОстаток долга на начало периода: {creditTotal}')
-  creditPaid = annuity(creditPercent, currentDuration, creditTotal) - creditTotal * creditPercent
-  print(f'Выплачено процентов: {creditTotal * creditPercent}')
-  print(f'Выплачено тело кредита: {creditPaid}')
+    currentDuration = creditDuration - year
+    print(f'\nПериод: {year + 1}')
+    year += 1
+    creditTotal -= creditPaid
+    print(f'\nОстаток долга на начало периода: {creditTotal}')
+    creditPaid = annuity(creditPercent, currentDuration, creditTotal) - creditTotal * creditPercent
+    print(f'Выплачено процентов: {creditTotal * creditPercent}')
+    print(f'Выплачено тело кредита: {creditPaid}')
 print(f'\nОстаток долга: {creditTotal - creditPaid}')
 print('\n=================================================\n')
 creditProlongation = int(input('На сколько лет продляется договор? '))
-creditInflation =  int(input('Увеличение ставки до: ')) / 100
+creditInflation = int(input('Увеличение ставки до: ')) / 100
 while year < creditDuration + creditProlongation:
-  currentDuration = creditDuration + creditProlongation - year
-  print(f'\nПериод: {year + 1}')
-  year += 1
-  creditTotal -= creditPaid
-  print(f'\nОстаток долга на начало периода: {creditTotal}')
-  creditPaid = annuity(creditInflation, currentDuration, creditTotal) - creditTotal * creditInflation
-  print(f'Выплачено процентов: {creditTotal * creditInflation}')
-  print(f'Выплачено тело кредита: {creditPaid}')
-print(f'\nОстаток долга: {creditTotal - creditPaid}')  
+    currentDuration = creditDuration + creditProlongation - year
+    print(f'\nПериод: {year + 1}')
+    year += 1
+    creditTotal -= creditPaid
+    print(f'\nОстаток долга на начало периода: {creditTotal}')
+    creditPaid = annuity(creditInflation, currentDuration, creditTotal) - creditTotal * creditInflation
+    print(f'Выплачено процентов: {creditTotal * creditInflation}')
+    print(f'Выплачено тело кредита: {creditPaid}')
+print(f'\nОстаток долга: {creditTotal - creditPaid}')
+
+#  Задача решена!
