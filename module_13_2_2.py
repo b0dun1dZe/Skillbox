@@ -6,13 +6,15 @@
 #Введите второе число: 10
 #НОД = 2
 
+
 def nod(a, b):
-  while a != 0 and b != 0:
-    if a > b:
-      a = a % b
-    else:
-      b = b % a
-  return (a + b)
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return a + b
+
 
 firstNum = int(input('Введите первое число: '))
 secondNum = int(input('Введите второе число: '))
