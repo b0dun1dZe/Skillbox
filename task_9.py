@@ -79,7 +79,7 @@ print('Задача 9. Аннуитетный платёж')
 
 creditTotal = float(input('Введите сумму кредита: '))
 creditDuration = int(input('На сколько лет выдан? '))
-creditPercent = int(input('Сколько процентов годовых? ')) / 100
+creditPercent = int(input('Под какой процент годовых? ')) / 100
 creditRebalance = int(input('Через сколько лет пересмотр условий? '))
 
 
