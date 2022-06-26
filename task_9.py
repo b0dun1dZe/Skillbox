@@ -94,7 +94,7 @@ currentDuration = 0
 year = 0
 while year < creditRebalance:
     currentDuration = creditDuration - year
-    print(f'\nПериод: {year + 1}')
+    print(f'\nПериод №: {year + 1}')
     year += 1
     creditTotal -= creditPaid
     print(f'\nОстаток долга на начало периода: {creditTotal}')
