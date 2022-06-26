@@ -24,20 +24,23 @@ print('Задача 5. Недоделка 2')
 # Также сделайте,
 # чтобы в основной части программы был только ввод чисел, затем изменённые числа и вывод их суммы.
 
+
 def counter(x):
-  num_count = 0
-  temp = x
-  while temp > 0:
-    num_count += 1
-    temp //= 10
-  return num_count
+    num_count = 0
+    temp = x
+    while temp > 0:
+        num_count += 1
+        temp //= 10
+    return num_count
+
 
 def reverse(number):
-  last_digit = number % 10
-  first_digit = number // 10 ** (counter(number) - 1)
-  between_digits = number % 10 ** (counter(number) - 1) // 10
-  number = last_digit * 10 ** (counter(number) - 1) + between_digits * 10 + first_digit
-  return number
+    last_digit = number % 10
+    first_digit = number // 10 ** (counter(number) - 1)
+    between_digits = number % 10 ** (counter(number) - 1) // 10
+    number = last_digit * 10 ** (counter(number) - 1) + between_digits * 10 + first_digit
+    return number
+
 
 first_n = int(input("Введите первое число: "))
 second_n = int(input("Введите второе число: "))
@@ -45,16 +48,16 @@ second_n = int(input("Введите второе число: "))
 error = False
 
 if counter(first_n) < 3:
-  print("В первом числе меньше трёх цифр.")
-  error = True
+    print("В первом числе меньше трёх цифр.")
+    error = True
 else:
-  first_n = reverse(first_n)
-  print(f'Изменённое первое число: {first_n}')
+    first_n = reverse(first_n)
+    print(f'Изменённое первое число: {first_n}')
 if counter(second_n) < 4:
-  print("Во втором числе меньше четырёх цифр.")
-  error = True
+    print("Во втором числе меньше четырёх цифр.")
+    error = True
 else:
-  second_n = reverse(second_n)
-  print(f'Изменённое второе число: {second_n}')
-if error == False:
-  print('\nСумма чисел:', first_n + second_n)
+    second_n = reverse(second_n)
+    print(f'Изменённое второе число: {second_n}')
+if error is False:
+    print('\nСумма чисел:', first_n + second_n)
